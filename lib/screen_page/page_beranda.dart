@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:mi2c_mobile/screen_page/page_bottom_navigation.dart';
+import 'package:mi2c_mobile/screen_page/page_list_berita.dart';
+import 'package:mi2c_mobile/screen_page/page_list_users.dart';
+import 'package:mi2c_mobile/screen_page/page_login_api.dart';
 import 'package:mi2c_mobile/screen_page/page_navigation_bar.dart';
+import 'package:mi2c_mobile/screen_page/page_register_api.dart';
+import 'package:mi2c_mobile/screen_page/page_search_list.dart';
 
 class PageBeranda extends StatelessWidget {
   const PageBeranda({super.key});
@@ -140,7 +145,102 @@ class PageBeranda extends StatelessWidget {
                 color: Colors.grey,
                 textColor: Colors.white,
               ),
-          )
+          ),
+              SizedBox(height: 10,),
+              Container(
+                height: 40, //tinggi button
+                width: 280,
+                child: MaterialButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)
+                  => PageSearchList()
+                  ));
+                },
+                  child: Text('Search List',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12
+                    ),
+                  ),
+                  color: Colors.grey,
+                  textColor: Colors.white,
+                ),
+              ),
+              SizedBox(height: 10,),
+              Container(
+                height: 40, //tinggi button
+                width: 280,
+                child: MaterialButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)
+                  => PageListUsers()
+                  ));
+                },
+                  child: Text('List User',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12
+                    ),
+                  ),
+                  color: Colors.grey,
+                  textColor: Colors.white,
+                ),
+              ),
+              SizedBox(height: 10,),
+              Container(
+                height: 40, //tinggi button
+                width: 280,
+                child: MaterialButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)
+                  => PageListBerita()
+                  ));
+                },
+                  child: Text('Page Berita',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12
+                    ),
+                  ),
+                  color: Colors.grey,
+                  textColor: Colors.white,
+                ),
+              ),
+              SizedBox(height: 10,),
+              Container(
+                height: 40, //tinggi button
+                width: 280,
+                child: MaterialButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)
+                  => PageRegisterApi()
+                  ));
+                },
+                  child: Text('Register',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12
+                    ),
+                  ),
+                  color: Colors.grey,
+                  textColor: Colors.white,
+                ),
+              ),
+              SizedBox(height: 10,),
+              Container(
+                height: 40, //tinggi button
+                width: 280,
+                child: MaterialButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)
+                  => PageLoginApi()
+                  ));
+                },
+                  child: Text('Login',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12
+                    ),
+                  ),
+                  color: Colors.grey,
+                  textColor: Colors.white,
+                ),
+              )
             ],
           ),
         ),
